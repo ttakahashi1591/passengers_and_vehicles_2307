@@ -30,7 +30,7 @@ RSpec.describe Park do
     it "adds a vehicle visiting the park" do
       expect(@park.vehicles).to be_a(Array)
 
-      @park.add_vehicle(@vehicle_1)
+      @park.add_vehicle(@vehicle)
 
       expect(@park.vehicles).to be_a(Array)
     end
