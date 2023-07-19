@@ -69,6 +69,7 @@ RSpec.describe Vehicle do
       @vehicle.add_passenger(@taylor) 
       
       expect(@vehicle.num_adults).to eq(2)
+require 'pry';binding.pry
     end
   end
 end
