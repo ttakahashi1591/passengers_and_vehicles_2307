@@ -8,4 +8,17 @@ class Park
     @admission_price = admission_price
     @vehicles = []
   end
+
+  def add_vehicle(vehicle)
+    @vehicles << vehicle
+  end
+
+  def passengers
+    @vehicles.flat_map(&:passengers)
+  end
+
+  def revenue
+    adult_passengers = passengers.select(&:adult?)
+    adult_passengers.count * @admission_price
+  end
 end
